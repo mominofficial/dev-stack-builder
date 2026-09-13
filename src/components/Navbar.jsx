@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import hamburgerIcon from '../assets/hamburger.png';
 
 export default function Navbar({ onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ export default function Navbar({ onNavigate }) {
               <X className="w-6 h-6" />
             ) : (
               <img 
-                src="/assets/hamburger.png" 
+                src={hamburgerIcon} 
                 alt="Menu" 
                 className="w-6 h-4.5 object-contain"
                 onError={(e) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import heroStackImg from '../assets/hero-stack.png';
 
 export default function Hero({ onExploreClick, onLearnMoreClick }) {
   return (
@@ -64,7 +65,7 @@ export default function Hero({ onExploreClick, onLearnMoreClick }) {
               <div className="absolute inset-0 bg-gradient-to-tr from-pink-500/10 via-purple-500/15 to-blue-500/10 rounded-3xl filter blur-2xl transform -rotate-3 scale-95" />
               
               <img
-                src="/assets/hero-stack.png"
+                src={heroStackImg}
                 alt="Development Stack 3D Visual"
                 className="relative w-full h-auto object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105 select-none"
                 loading="eager"
@@ -77,3 +78,4 @@ export default function Hero({ onExploreClick, onLearnMoreClick }) {
     </section>
   );
 }
+

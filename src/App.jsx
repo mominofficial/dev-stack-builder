@@ -38,7 +38,8 @@ export default function App() {
   // Fetch technologies data asynchronously from JSON file
   useEffect(() => {
     setLoading(true);
-    fetch('./data/technologies.json')
+    const jsonUrl = `${import.meta.env.BASE_URL}data/technologies.json`;
+    fetch(jsonUrl)
       .then((res) => {
         if (!res.ok) {
           throw new Error(`Failed to load technologies: ${res.status}`);
@@ -52,7 +53,7 @@ export default function App() {
       .catch((err) => {
         console.error('Error fetching data:', err);
         // Fallback in case of path issue
-        fetch('/data/technologies.json')
+        fetch('./data/technologies.json')
           .then((res) => res.json())
           .then((data) => {
             setTechnologies(data);
